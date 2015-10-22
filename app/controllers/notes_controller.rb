@@ -24,7 +24,7 @@ class NotesController < ApplicationController
   private
 
   def note_params
-    params.permit(:title, :content)
+    params.slice(:title, :content).permit
   end
 
   def notes
